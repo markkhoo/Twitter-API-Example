@@ -8,8 +8,10 @@ var client = new Twitter({
   bearer_token: process.env.TWITTER_BEARER_TOKEN
 });
 
-client.get('search/tweets', {q: '#ios #swift'}, function(error, tweets, response) {
-   tweets.statuses.forEach(function(tweet) {
-   	console.log("tweet: " + tweet.text)
-   });
+client.get('search/tweets', { q: 'valorant', count: 1 }, function (error, tweets, response) {
+  tweets.statuses.forEach(function (tweet) {
+    // console.log("tweet: " + tweet.text);
+    // console.log('\n\n');
+    console.log(tweet);
+  });
 });
