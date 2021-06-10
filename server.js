@@ -8,10 +8,16 @@ var client = new Twitter({
   bearer_token: process.env.TWITTER_BEARER_TOKEN
 });
 
-client.get('search/tweets', { q: 'valorant', count: 1 }, function (error, tweets, response) {
+var stuffSend = [];
+
+client.get('search/tweets', { q: 'valorant', count: 10 }, function (error, tweets, response) {
   tweets.statuses.forEach(function (tweet) {
     // console.log("tweet: " + tweet.text);
     // console.log('\n\n');
+    stuffSend.push({
+      text: tweet.text,
+      user: tweet.user.screen_name
+    })
     console.log(tweet);
   });
 });
