@@ -1,5 +1,5 @@
 # Twitter-API-Example
-Just a test for the twitter API. This uses the [Standard v1.1](https://developer.twitter.com/en/docs/twitter-api/v1) Twitter API. 
+Just a test for the twitter API. This uses the [Standard v1.1](https://developer.twitter.com/en/docs/twitter-api/v1) Twitter API. Filtered and Sampled Streams are retired in v1.1. Twitter streams can be accesed in v2 API. 
 
 ## Technologies Used
 * [twitter for Node.js](https://www.npmjs.com/package/twitter)
